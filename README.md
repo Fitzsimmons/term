@@ -14,9 +14,9 @@ I use [input](http://input.fontbureau.com/). Their license prohibits me from red
 
 I use the [base16](https://github.com/chriskempson/base16-gnome-terminal) tomorrow dark colour theme in gnome terminal.
 
-### Debian (and potentially debian derivatives)
+### Workarounds for debian (and potentially debian derivatives)
 
-1. `sudo apt-get install uuid-runtime dconf-cli`
+1. You need to install some tools that are used by the shellscripts for installing the theme: `sudo apt-get install uuid-runtime dconf-cli`
 1. Create a profile called "Default", and switch to it as the default. This profile needs to be present for the installation script to work, for some reason. You can delete it afterwards.
 
 ### Installation
@@ -25,6 +25,6 @@ I use the [base16](https://github.com/chriskempson/base16-gnome-terminal) tomorr
 
 ## Shell
 
-I use [oh my zsh](https://github.com/robbyrussell/oh-my-zsh). I use the defaults, except for:
-* my own theme file: [justinf.zsh-theme](justinf.zsh-theme)
-* The [auto suggestions plugin](https://github.com/zsh-users/zsh-autosuggestions), but I'm not sure if I'm going to keep it.
+I use [oh my zsh](https://github.com/robbyrussell/oh-my-zsh), with a pretty tiny [.zshrc](.zshrc). My config includes:
+* my own theme file: [justinf.zsh-theme](justinf.zsh-theme), installed to ~/.oh-my-zsh/custom/themes
+* The [auto suggestions plugin](https://github.com/zsh-users/zsh-autosuggestions).
