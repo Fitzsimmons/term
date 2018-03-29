@@ -43,4 +43,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+export GOPATH=$HOME/go
+
 source ~/.zshrc-private
