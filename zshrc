@@ -40,7 +40,7 @@ else
   export EDITOR='subl --wait --new-window'
 fi
 
-export NVM_DIR="/home/justinf/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 source ~/.zshrc-private
