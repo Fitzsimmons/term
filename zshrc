@@ -16,9 +16,14 @@ unsetopt correct_all
 export rvm_silence_path_mismatch_check_flag=1
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+[[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+
 export PYENV_ROOT="$HOME/.pyenv"
 
-PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/go/bin:/opt/chefdk/bin:$PATH:$HOME/.rvm/bin:/bin:/usr/sbin:$HOME/.tfenv/bin:/usr/local/heroku/bin:$HOME/.cargo/bin
+PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/go/bin:/opt/chefdk/bin:$PATH:/bin:/usr/sbin:$HOME/.tfenv/bin:/usr/local/heroku/bin
 export PATH
 
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
@@ -40,9 +45,6 @@ else
   export EDITOR='subl --wait --new-window'
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 export GOPATH=$HOME/go
 
-source ~/.zshrc-private
+[[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
