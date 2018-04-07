@@ -21,7 +21,7 @@ I use the [base16](https://github.com/chriskempson/base16-gnome-terminal) tomorr
 
 ### Installation
 
-1. Install the colour theme, but as a warning, the following command has been known to close the terminal: `source base16-gnome-terminal/base16-default.dark.sh`
+1. Install the colour theme, but as a warning, the following command has been known to close the terminal: `source base16-gnome-terminal/base16-tomorrow.dark.sh`
 
 ## Shell
 
