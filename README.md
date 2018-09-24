@@ -25,6 +25,6 @@ I use the [base16](https://github.com/chriskempson/base16-gnome-terminal) tomorr
 
 ## Shell
 
-I use [oh my zsh](https://github.com/robbyrussell/oh-my-zsh), with a pretty tiny [.zshrc](.zshrc). My config includes:
+I use [oh my zsh](https://github.com/robbyrussell/oh-my-zsh), with a pretty tiny [.zshrc](zshrc). My config includes:
 * my own theme file: [justinf.zsh-theme](justinf.zsh-theme), installed to ~/.oh-my-zsh/custom/themes
 * The [auto suggestions plugin](https://github.com/zsh-users/zsh-autosuggestions).
