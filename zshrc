@@ -48,3 +48,10 @@ fi
 export GOPATH=$HOME/go
 
 [[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
+
+if which keepassxc-cli &> /dev/null; then
+	function keepassxc-sync() {
+		keepassxc-cli merge -s ~/Documents/Database.kdbx ~/Dropbox/Database.kdbx
+		keepassxc-cli merge -s ~/Dropbox/Database.kdbx ~/Documents/Database.kdbx
+	}
+fi
