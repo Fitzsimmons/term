@@ -55,3 +55,11 @@ if which keepassxc-cli &> /dev/null; then
 		keepassxc-cli merge -s ~/Dropbox/Database.kdbx ~/Documents/Database.kdbx
 	}
 fi
+
+# https://twitter.com/DynamicWebPaige/status/1045656785305178112
+function paigeword {
+	local length=${1:-30}
+
+	tr -dc '[:alnum:]' < /dev/urandom | head -c $length
+	echo
+}
