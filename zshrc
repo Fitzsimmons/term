@@ -63,3 +63,12 @@ function paigeword {
 	tr -dc '[:alnum:]' < /dev/urandom | head -c $length
 	echo
 }
+
+if which bat &> /dev/null; then
+	alias less=bat
+	export BAT_THEME=TwoDark
+fi
+
+if which lsd &> /dev/null; then
+	alias ls=lsd
+fi
