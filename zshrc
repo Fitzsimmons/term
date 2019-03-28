@@ -49,6 +49,19 @@ export GOPATH=$HOME/go
 
 [[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
 
+# SLACK_HOOK_URL is private, so export it in ~/.zshrc-private
+if [ -n SLACK_HOOK_URL ]; then
+	function write-slack() {
+		message="${1:-"Command Finished."}"
+		curl --silent -X POST --data-urlencode "payload={\"username\": \"command-notifier\", \"text\": \"$message\"}" $SLACK_HOOK_URL
+	}
+
+	function notify-slack() {
+		"$@"
+		write-slack "\`$*\` completed."
+	}
+fi
+
 if which keepassxc-cli &> /dev/null; then
 	function keepassxc-sync() {
 		keepassxc-cli merge -s ~/Documents/Database.kdbx ~/Dropbox/Database.kdbx
