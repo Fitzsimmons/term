@@ -28,3 +28,16 @@ I use the [base16](https://github.com/chriskempson/base16-gnome-terminal) tomorr
 I use [oh my zsh](https://github.com/robbyrussell/oh-my-zsh), with a pretty tiny [.zshrc](zshrc). My config includes:
 * my own theme file: [justinf.zsh-theme](justinf.zsh-theme), installed to ~/.oh-my-zsh/custom/themes
 * The [auto suggestions plugin](https://github.com/zsh-users/zsh-autosuggestions).
+
+
+### Slack notifications
+
+If you export SLACK_HOOK_URL in your .zshrc-private or otherwise make it available in your environment, the .zshrc will make `write-slack` and `notify-slack` available. `notify-slack` is a helper for long-running commands that can notify you by sending you a DM from yourself when the wrapped command finishes. You can use it by simply prepending `notify-slack` on the beginning of your command, like this:
+
+![screenshot of a terminal using notify-slack](command-notifier-terminal.png)
+
+Which will send you a message in slack that looks like this:
+
+![screenshot of slack notification](command-notifier-slack.png)
+
+You'll need an incoming webhook url for your desired workspace in order for this to work. See about how to get one here: https://api.slack.com/incoming-webhooks#create_a_webhook
