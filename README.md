@@ -41,3 +41,14 @@ Which will send you a message in slack that looks like this:
 ![screenshot of slack notification](command-notifier-slack.png)
 
 You'll need an incoming webhook url for your desired workspace in order for this to work. See about how to get one here: https://api.slack.com/incoming-webhooks#create_a_webhook
+
+### Improved cli utilities
+
+My zshrc aliases several improved cli utilities if they're found in the path:
+
+* [`lsd`](https://github.com/Peltoche/lsd#description), which replaces `ls`
+* [ripgrep (`rg`)](https://github.com/BurntSushi/ripgrep#ripgrep-rg), which replaces `grep`
+* [`fd`](https://github.com/sharkdp/fd#fd), which replaces `find`
+* [`bat`](https://github.com/sharkdp/bat#syntax-highlighting), which replaces `less`
+
+I have included `cli-utils-downloader.bash` as a way to download the latest releases of these apps for linux and put them in `~/bin`.
