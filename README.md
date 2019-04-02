@@ -47,6 +47,8 @@ You'll need an incoming webhook url for your desired workspace in order for this
 My zshrc aliases several improved cli utilities if they're found in the path:
 
 * [`lsd`](https://github.com/Peltoche/lsd#description), which replaces `ls`
+	* You'll need a patched nerd-font or font-awesome: https://github.com/Peltoche/lsd#prerequisites
+		* Since it's not legal to redistribute Input, you can't get a pre-patched version of it. I had to patch it myself: https://github.com/ryanoasis/nerd-fonts#option-8-patch-your-own-font
 * [ripgrep (`rg`)](https://github.com/BurntSushi/ripgrep#ripgrep-rg), which replaces `grep`
 * [`fd`](https://github.com/sharkdp/fd#fd), which replaces `find`
 * [`bat`](https://github.com/sharkdp/bat#syntax-highlighting), which replaces `less`
