@@ -64,8 +64,8 @@ fi
 
 if which keepassxc-cli &> /dev/null; then
 	function keepassxc-sync() {
-		keepassxc-cli merge -s ~/Documents/Database.kdbx ~/Dropbox/Database.kdbx
-		keepassxc-cli merge -s ~/Dropbox/Database.kdbx ~/Documents/Database.kdbx
+		keepassxc-cli merge -s ~/Documents/Database.kdbx /keybase/private/jsfitzsimmons/sync/Database.kdbx
+		keepassxc-cli merge -s /keybase/private/jsfitzsimmons/sync/Database.kdbx ~/Documents/Database.kdbx
 	}
 fi
 
