@@ -34,6 +34,15 @@ if which rg &> /dev/null; then
 	alias grep="rg -uu -N"
 fi
 
+if which bat &> /dev/null; then
+	alias less=bat
+	export BAT_THEME=TwoDark
+fi
+
+if which lsd &> /dev/null; then
+	alias ls=lsd
+fi
+
 if which pyenv &> /dev/null; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
@@ -79,12 +88,3 @@ function paigeword {
 	tr -dc '[:alnum:]' < /dev/urandom | head -c $length
 	echo
 }
-
-if which bat &> /dev/null; then
-	alias less=bat
-	export BAT_THEME=TwoDark
-fi
-
-if which lsd &> /dev/null; then
-	alias ls=lsd
-fi
