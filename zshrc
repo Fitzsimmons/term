@@ -72,13 +72,6 @@ if [ -n SLACK_HOOK_URL ]; then
 	}
 fi
 
-if which keepassxc-cli &> /dev/null; then
-	function keepassxc-sync() {
-		keepassxc-cli merge -s ~/Documents/Database.kdbx /keybase/private/jsfitzsimmons,justinf/sync/Database.kdbx
-		keepassxc-cli merge -s /keybase/private/jsfitzsimmons,justinf/sync/Database.kdbx ~/Documents/Database.kdbx
-	}
-fi
-
 # https://twitter.com/DynamicWebPaige/status/1045656785305178112
 function paigeword {
 	local length=${1:-30}
