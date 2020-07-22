@@ -23,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PYENV_ROOT="$HOME/.pyenv"
 
-PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/go/bin:/opt/chefdk/bin:$PATH:/bin:/usr/sbin:$HOME/.tfenv/bin:/usr/local/heroku/bin
+PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/go/bin:$PATH:/bin:/usr/sbin
 export PATH
 
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
