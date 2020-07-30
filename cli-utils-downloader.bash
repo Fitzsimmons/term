@@ -14,6 +14,7 @@ UTILS=(
 	Peltoche/lsd
 	sharkdp/fd
 	BurntSushi/ripgrep
+	clementtsang/bottom
 )
 
 function releases_url() {
@@ -27,8 +28,8 @@ function download_url() {
 mkdir -p "$HOME/bin"
 
 for util in ${UTILS[@]}; do
-	echo "Fetching $util ..."
-	curl -L -s $(download_url $util) | tar xz --strip-components 1 -C $extraction_dir
+	echo "Fetching $util ... $(download_url $util)"
+	curl -L -s $(download_url $util) | tar xz -C $extraction_dir
 done
 
-find $extraction_dir -maxdepth 1 -type f -executable -exec mv {} $HOME/bin \;
+find $extraction_dir -type f -executable -exec mv {} $HOME/bin \;

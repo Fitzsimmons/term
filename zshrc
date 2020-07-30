@@ -43,6 +43,10 @@ if which lsd &> /dev/null; then
 	alias ls=lsd
 fi
 
+if which btm &> /dev/null; then
+	alias top='btm -b'
+fi
+
 if which pyenv &> /dev/null; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
