@@ -1,29 +1,16 @@
 ZSH=$HOME/.oh-my-zsh
 export ZSH
 
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions asdf)
 
 ZSH_THEME="justinf"
 
 DISABLE_AUTO_UPDATE="true"
 
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(rvm)
-
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-export rvm_silence_path_mismatch_check_flag=1
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-
-[[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
-
-export PYENV_ROOT="$HOME/.pyenv"
-
-PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/go/bin:$PATH:/bin:/usr/sbin
+PATH=$HOME/bin:$HOME/.local/bin:$PATH:/bin:/usr/sbin
 export PATH
 
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
@@ -45,11 +32,6 @@ fi
 
 if which btm &> /dev/null; then
 	alias top='btm -b'
-fi
-
-if which pyenv &> /dev/null; then
-	eval "$(pyenv init -)"
-	eval "$(pyenv virtualenv-init -)"
 fi
 
 export EDITOR='nano -w'
