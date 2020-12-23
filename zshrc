@@ -84,3 +84,9 @@ function paigeword {
 	tr -dc '[:alnum:]' < /dev/urandom | head -c $length
 	echo
 }
+
+function die {
+	local sides=${1:-6}
+
+	shuf -i 1-${sides} -n1
+}
