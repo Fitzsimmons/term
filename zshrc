@@ -58,14 +58,6 @@ if [ ! -z DISPLAY ]; then
 	if which subl &> /dev/null; then
 		export EDITOR='subl --wait --new-window'
 	fi
-
-	if which code &> /dev/null; then
-		export EDITOR='code --wait --new-window'
-	fi
-
-	if which codium &> /dev/null; then
-		export EDITOR='codium --wait --new-window'
-	fi
 fi
 
 export GOPATH=$HOME/go
