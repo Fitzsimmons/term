@@ -6,7 +6,7 @@ There are many like it, but this one is mine.
 
 ## Font
 
-I use [input](http://input.fontbureau.com/). Their license prohibits me from redistributing my customizations, but I can show the settings I used on their download page:
+I use [input](https://input.djr.com/download/). Their license prohibits me from redistributing my customizations, but I can show the settings I used on their download page:
 
 ![input download settings](input.png)
 
