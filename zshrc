@@ -10,7 +10,7 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-PATH=$HOME/bin:$HOME/.local/bin:$PATH:/bin:/usr/sbin
+PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:/bin:/usr/sbin
 export PATH
 
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
