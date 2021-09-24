@@ -43,6 +43,7 @@ if [ ! -z DISPLAY ]; then
 fi
 
 export GOPATH=$HOME/go
+export GOPROXY=https://proxy.golang.org
 
 [[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
 
