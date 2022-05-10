@@ -1,0 +1,10 @@
+font:
+  size: 15.0
+  normal:
+    family: VictorMono Nerd Font
+  bold:
+    style: SemiBold
+  italic:
+    style: Oblique
+  bold_italic:
+    style: SemiBold Oblique

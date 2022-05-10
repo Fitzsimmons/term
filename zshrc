@@ -36,6 +36,11 @@ fi
 
 export EDITOR='nano -w'
 
+if [ "$(uname)" = "Darwin" ]; then
+	alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+	alias smerge='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
+fi
+
 if [ ! -z DISPLAY ]; then
 	if which subl &> /dev/null; then
 		export EDITOR='subl --wait --new-window'

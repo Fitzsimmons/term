@@ -1,0 +1,10 @@
+font:
+  size: 14.0
+  normal:
+    family: Monoid Nerd Font
+  bold:
+    style: Bold
+  italic:
+    style: Italic
+  bold_italic:
+    style: Bold Italic

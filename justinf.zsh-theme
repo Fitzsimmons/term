@@ -30,7 +30,7 @@ local execution_time='%{$fg[blue]%}$(execution_time)%{$reset_color%}'
 
 function execution_time() {
   if [[ "$SPACESHIP_EXEC_TIME_duration" -gt "2" ]]; then
-    echo " ⏲$SPACESHIP_EXEC_TIME_duration"
+    echo "  $SPACESHIP_EXEC_TIME_duration"
   fi
 }
 

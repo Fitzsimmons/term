@@ -1,0 +1,10 @@
+font:
+  size: 14.0
+  normal:
+    family: BitstreamVeraSansMono Nerd Font
+  bold:
+    style: Bold
+  italic:
+    style: Oblique
+  bold_italic:
+    style: Bold Oblique

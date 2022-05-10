@@ -1,0 +1,10 @@
+font:
+  size: 15.0
+  normal:
+    family: UbuntuMono Nerd Font
+  bold:
+    style: Bold
+  italic:
+    style: Oblique
+  bold_italic:
+    style: Bold Oblique
