@@ -857,6 +857,13 @@ scrolling:
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
+key_bindings:
+ - { key: C, mods: Command|Shift, action: Copy }
+ - { key: V, mods: Command|Shift, action: Paste }
+ - { key: C, mods: Command, chars: "\x03" } # ^C
+ - { key: D, mods: Command, chars: "\x04" } # ^D
+ - { Key: Z, mods: Command, chars: "\x1A" } # ^Z
+
 #debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
