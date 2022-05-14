@@ -39,6 +39,8 @@ export EDITOR='nano -w'
 if [ "$(uname)" = "Darwin" ]; then
 	alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 	alias smerge='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
+
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if [ ! -z DISPLAY ]; then
