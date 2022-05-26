@@ -40,7 +40,11 @@ if [ "$(uname)" = "Darwin" ]; then
 	alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 	alias smerge='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
 
-	eval "$(/opt/homebrew/bin/brew shellenv)"
+	if which brew %> /dev/null; then
+		eval "$(brew shellenv)"
+	elif [[ -s "/opt/homebrew/bin/brew" ]]; then
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+	fi
 fi
 
 if [ ! -z DISPLAY ]; then
@@ -75,7 +79,7 @@ function paigeword {
 	echo
 }
 
-function die {
+function roll {
 	local sides=${1:-6}
 
 	shuf -i 1-${sides} -n1
