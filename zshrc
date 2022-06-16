@@ -10,7 +10,11 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:/bin:/usr/sbin
+
+export GOPATH=$HOME/go
+export GOPROXY=https://proxy.golang.org
+
+PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:/bin:/usr/sbin:$GOPATH/bin
 export PATH
 
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
@@ -52,9 +56,6 @@ if [ ! -z DISPLAY ]; then
 		export EDITOR='subl --wait --new-window'
 	fi
 fi
-
-export GOPATH=$HOME/go
-export GOPROXY=https://proxy.golang.org
 
 [[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
 
