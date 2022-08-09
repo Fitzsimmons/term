@@ -20,6 +20,9 @@ export PATH
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
 alias jesc="perl -p -e 's/\\n/\\\\n/'"
 
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+
 if which rg &> /dev/null; then
 	unalias grep
 	alias grep="rg -uu -N"
@@ -36,6 +39,18 @@ fi
 
 if which btm &> /dev/null; then
 	alias top='btm -b'
+fi
+
+if which terraform &> /dev/null; then
+	alias tf=terraform
+fi
+
+if which fzf &> /dev/null; then
+	if which fd &> /dev/null; then
+		alias fzd='fd -t d | fzf'
+	else
+		alias fzd='find -t d | fzf'
+	fi
 fi
 
 export EDITOR='nano -w'
