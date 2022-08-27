@@ -860,6 +860,7 @@ hints:
 key_bindings:
  - { key: C, mods: Command|Shift, action: Copy }
  - { key: V, mods: Command|Shift, action: Paste }
+ - { Key: B, mods: Command, chars: "\x02" } # ^B
  - { key: C, mods: Command, chars: "\x03" } # ^C
  - { key: D, mods: Command, chars: "\x04" } # ^D
  - { Key: Z, mods: Command, chars: "\x1A" } # ^Z
