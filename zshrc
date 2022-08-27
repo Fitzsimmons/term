@@ -91,7 +91,7 @@ fi
 function paigeword {
 	local length=${1:-30}
 
-	tr -dc '[:alnum:]' < /dev/urandom | head -c $length
+	gtr -dc '[:alnum:]' < /dev/urandom | head -c $length
 	echo
 }
 
