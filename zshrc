@@ -73,30 +73,3 @@ if [ ! -z DISPLAY ]; then
 fi
 
 [[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
-
-# SLACK_HOOK_URL is private, so export it in ~/.zshrc-private
-if [ -n SLACK_HOOK_URL ]; then
-	function write-slack() {
-		message="${1:-"Command Finished."}"
-		curl --silent -X POST --data-urlencode "payload={\"username\": \"command-notifier\", \"text\": \"$message\"}" $SLACK_HOOK_URL
-	}
-
-	function notify-slack() {
-		"$@"
-		write-slack "\`$*\` completed."
-	}
-fi
-
-# https://twitter.com/DynamicWebPaige/status/1045656785305178112
-function paigeword {
-	local length=${1:-30}
-
-	gtr -dc '[:alnum:]' < /dev/urandom | head -c $length
-	echo
-}
-
-function roll {
-	local sides=${1:-6}
-
-	shuf -i 1-${sides} -n1
-}
