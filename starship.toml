@@ -48,8 +48,10 @@ style = "bg:purple fg:black"
 
 [git_status]
 style = "bg:purple fg:black"
-format = '[$conflicted$untracked$modified$staged$stashed]($style)'
+format = '[$conflicted$deleted$renamed$untracked$modified$staged$stashed]($style)'
 conflicted = "\\[C:$count\\]"
+deleted = "\\[D:$count\\]"
+renamed = "\\[R:$count\\]"
 untracked = "\\[U:$count\\]"
 modified = "\\[M:$count\\]"
 staged = "\\[S:$count\\]"
