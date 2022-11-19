@@ -1,0 +1,66 @@
+format = """
+[](green)\
+$username$hostname\
+[](bg:blue fg:green)\
+$directory\
+[](fg:blue bg:purple)\
+$git_branch\
+$git_commit\
+$git_status\
+[](fg:purple bg:yellow)\
+$cmd_duration\
+[](fg:yellow bg:red)\
+$status\
+[](fg:red)
+> 
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:green fg:black"
+style_root = "bg:green fg:black"
+format = '[ $user]($style)'
+
+[hostname]
+ssh_only = false
+style = "bg:green fg:black"
+format = "[@$hostname ]($style)"
+
+[directory]
+style = "bg:blue fg:black"
+format = "[ $path ]($style)"
+truncate_to_repo = false
+truncation_length = 6
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:purple fg:black"
+format = '[ $symbol $branch ]($style)'
+
+[git_commit]
+format = "[  ](bg:purple fg:bright-white)[$hash ]($style)"
+style = "bg:purple fg:black"
+
+[git_status]
+style = "bg:purple fg:black"
+format = '[$conflicted$untracked$modified$staged$stashed]($style)'
+conflicted = "\\[C:$count\\]"
+untracked = "\\[U:$count\\]"
+modified = "\\[M:$count\\]"
+staged = "\\[S:$count\\]"
+stashed = "[{S:$count}](fg:bright-white bg:purple)"
+
+[cmd_duration]
+show_milliseconds = true
+format = "[  $duration]($style)"
+style = "bg:yellow fg:black"
+
+[status]
+disabled = false
+format = "[ $symbol $status]($style)"
+style = "bg:red fg:black"

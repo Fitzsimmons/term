@@ -75,3 +75,7 @@ if [ ! -z DISPLAY ]; then
 fi
 
 [[ -s "$HOME/.zshrc-private" ]] && source ~/.zshrc-private
+
+if which starship &> /dev/null; then
+	eval "$(starship init zsh)"
+fi
