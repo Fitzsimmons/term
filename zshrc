@@ -51,6 +51,8 @@ if which fzf &> /dev/null; then
 	else
 		alias fzd='find -t d | fzf'
 	fi
+
+	alias cdf='cd "$(fzd --height=40%)"'
 fi
 
 export EDITOR='nano -w'
