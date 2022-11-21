@@ -70,7 +70,7 @@ fi
 
 if [ ! -z DISPLAY ]; then
 	if which subl &> /dev/null; then
-		export EDITOR='subl --wait --new-window'
+		export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl --wait --new-window'
 	fi
 fi
 
