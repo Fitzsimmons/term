@@ -17,6 +17,12 @@ export GOPROXY=https://proxy.golang.org
 PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:/bin:/usr/sbin:$GOPATH/bin
 export PATH
 
+if which brew &> /dev/null; then
+	eval "$(brew shellenv)"
+elif [[ -s "/opt/homebrew/bin/brew" ]]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 alias srsync=rsync\ --rsh=ssh\ --partial\ --progress\ -r
 alias jesc="perl -p -e 's/\\n/\\\\n/'"
 
@@ -60,12 +66,6 @@ export EDITOR='nano -w'
 if [ "$(uname)" = "Darwin" ]; then
 	alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 	alias smerge='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
-
-	if which brew %> /dev/null; then
-		eval "$(brew shellenv)"
-	elif [[ -s "/opt/homebrew/bin/brew" ]]; then
-		eval "$(/opt/homebrew/bin/brew shellenv)"
-	fi
 fi
 
 if [ ! -z DISPLAY ]; then
