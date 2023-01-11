@@ -17,6 +17,8 @@ export GOPROXY=https://proxy.golang.org
 PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:/bin:/usr/sbin:$GOPATH/bin
 export PATH
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 if which brew &> /dev/null; then
 	eval "$(brew shellenv)"
 elif [[ -s "/opt/homebrew/bin/brew" ]]; then
