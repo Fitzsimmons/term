@@ -61,19 +61,19 @@ if which fzf &> /dev/null; then
 	fi
 
 	function cdf() {
-		query=$1
+		local query=$1
 		if [ -n "$query" ]; then
-			queryflag="--query='${query}'"
+			local queryflag="--query='${query}'"
 		fi
 
 		if which lsd &> /dev/null; then
-			preview="lsd --color=always --icon=always {}"
+			local preview="lsd --color=always --icon=always {}"
 		else
-			preview="ls {}"
+			local preview="ls {}"
 		fi
 
-		template='cd "$(fzd --height=40%% --preview="%s" %s)"'
-		command=$(printf "${template}" "${preview}" "${queryflag}")
+		local template='cd "$(fzd --height=40%% --preview="%s" %s)"'
+		local command=$(printf "${template}" "${preview}" "${queryflag}")
 		eval "${command}"
 	}
 fi
