@@ -7,6 +7,9 @@ set -euo pipefail
 
     git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    ln -sf "$current_dir/zshrc" ~/.zshrc
-    ln -sf "$current_dir/justinf.zsh-theme" ~/.oh-my-zsh/custom/themes
+    ln -s "$current_dir/zshrc" ~/.zshrc
+    ln -s "$current_dir/justinf.zsh-theme" ~/.oh-my-zsh/custom/themes
+
+    mkdir -p ~/.config
+    ln -s "$current_dir/starship.toml" ~/.config/starship.toml
 )
