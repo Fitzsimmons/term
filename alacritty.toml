@@ -1,0 +1,63 @@
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+Key = "B"
+chars = "\u0002"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0003"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0004"
+key = "D"
+mods = "Command"
+
+[[keyboard.bindings]]
+Key = "Z"
+chars = "\u001A"
+mods = "Command"
+
+[[keyboard.bindings]]
+Key = "T"
+action = "CreateNewWindow"
+mods = "Command|Shift"
+
+[general]
+import = ["/Users/justinf/docs/term/base16-alacritty/colors/base16-tomorrow-night-eighties.toml", "/Users/justinf/docs/term/alacritty_fonts/current.toml"]
+
+[[hints.enabled]]
+command = "open"
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "Control"
+
+[scrolling]
+history = 100000
+
+[window]
+decorations = "full"
+
+[window.padding]
+x = 2
+y = 2
+
+[keyboard]

@@ -1,0 +1,14 @@
+[font]
+size = 15.0
+
+[font.bold]
+style = "SemiBold"
+
+[font.bold_italic]
+style = "SemiBold Oblique"
+
+[font.italic]
+style = "Oblique"
+
+[font.normal]
+family = "VictorMono Nerd Font"

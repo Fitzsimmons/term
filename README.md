@@ -37,10 +37,7 @@ mkdir -p ~/docs/
 cd ~/docs
 git clone https://github.com/fitzsimmons/term
 cd term
-./install_omzsh.bash
-git clone https://github.com/aarowill/base16-alacritty
-ln -s ~/docs/term/alacritty.yml ~/.alacritty.yml
-ln -s ~/docs/term/starship.toml ~/.config/starship.toml
+./install.bash
 ```
 
 ### Optional utilities
