@@ -10,7 +10,6 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-
 export GOPATH=$HOME/go
 export GOPROXY=https://proxy.golang.org
 
@@ -18,6 +17,9 @@ PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:/bin:/usr/sbin:$GOPATH/bi
 export PATH
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+# only page output from the aws cli when its lenghth surpasses the height of the terminal
+export AWS_PAGER="\less -F -X"
 
 if which brew &> /dev/null; then
 	eval "$(brew shellenv)"
