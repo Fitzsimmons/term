@@ -3,6 +3,9 @@ export ZSH
 
 plugins=(zsh-autosuggestions asdf)
 
+[[ -f ~/.zshrc.plugins.local ]] && source ~/.zshrc.plugins.local
+typeset -U plugins
+
 ZSH_THEME="justinf"
 
 DISABLE_AUTO_UPDATE="true"
