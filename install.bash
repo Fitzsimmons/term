@@ -17,4 +17,7 @@ set -euo pipefail
 
     git clone https://github.com/aarowill/base16-alacritty
     ln -s "$current_dir/alacritty.toml" ~/.alacritty.toml
+
+    mkdir -p ~/.config/ghostty
+    ln -s "$current_dir"/config.ghostty ~/.config/ghostty/config.ghostty
 )

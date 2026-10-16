@@ -6,7 +6,7 @@ There are many like it, but this one is mine.
 
 ## Terminal emulator
 
-I use [alacritty](https://alacritty.org/).
+I use [alacritty](https://alacritty.org/), but I am also trialing [ghostty](https://ghostty.org/).
 
 ## Font
 
@@ -14,7 +14,7 @@ I use [Victor Mono](https://rubjo.github.io/victor-mono/) with the additional [n
 
 ## Terminal colours
 
-I use the [base16](https://github.com/aarowill/base16-alacritty) tomorrow night eighties theme for alacritty.
+I use the [base16](https://github.com/aarowill/base16-alacritty) tomorrow night eighties theme for alacritty and ghostty. Tomorrow night is distributed by default in ghostty.
 
 ## Prompt
 
